@@ -58,8 +58,15 @@ import com.google.gwt.xml.client.XMLParser;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
+ * @author Dushyant Sabharwal
+ * @category Entry Point Class for Handling the intial request from the GWT plugin
+ */
+/**
+ * @author Dush
+ *
  */
 public class GNR629Project_1 implements EntryPoint {
+    //the default projection system
     private static final Projection DEFAULT_PROJECTION = new Projection("EPSG:4326");
 
     public static MapWidget mapWidget;
@@ -77,16 +84,19 @@ public class GNR629Project_1 implements EntryPoint {
     private WFSManager wfsManager;
     /**
      * This is the entry point method.
+     * @author Dushyant Sabharwal
+     * 
      */
     public void onModuleLoad() {
         
         wfsManager = new WFSManager();
         
-        //adding the serverList
+        //adding the servers list
         server.put("Geoserver","http://localhost:8083/geoserver/");
+        //this is the external server
         server.put("NASA Socio Economic Data","http://sedac.ciesin.columbia.edu/geoserver/gwc/service/");
         
-        // let’s create map widget and map objects
+        // lets create map widget and map objects
         mapWidget = new MapWidget("100%","623px", setMapOtpions("EPSG:4326"));
         map = mapWidget.getMap();
         // adding google Base Map layer on map
@@ -152,6 +162,11 @@ public class GNR629Project_1 implements EntryPoint {
 
     }
     
+    /**
+     * This method prepares the whole GUI whenever the user selects a different server
+     * since every server has it's own capabilities
+     * @return
+     */
     private VerticalPanel changeConfigurationPanel() {
         
         final VerticalPanel configPanel=new VerticalPanel();
@@ -197,6 +212,13 @@ public class GNR629Project_1 implements EntryPoint {
         return configPanel;
     }
     
+    /**
+     * this method is responsible for handling the functionality of WCS for which ever server
+     * selected by the user
+     * @param builder request builder for sending the ajax request
+     * @param serverUrl server url where the request will be sent
+     * @return the vertical panel with all the necessary widgets
+     */
     private static VerticalPanel prepareWCSPanel(RequestBuilder builder,final String serverUrl)
     {
         String requestData = null;
@@ -553,6 +575,13 @@ public class GNR629Project_1 implements EntryPoint {
        return panelForWCS;
     }
     
+    /**
+     * this method is responsible for handling the functionality of WMS for which ever server
+     * selected by the user
+     * @param builder builder request builder for sending the ajax request
+     * @param serverUrl serverUrl server url where the request will be sent
+     * @return the vertical panel with all the necessary widgets
+     */
     private static VerticalPanel prepareWMSPanel(RequestBuilder builder,final String serverUrl)
     {
         String requestData = null;
@@ -920,6 +949,10 @@ public class GNR629Project_1 implements EntryPoint {
        return panelForWMS;
     }
     
+    /**
+     * @param projection specifying the projection code to be used by the base layer
+     * @return the map options
+     */
     private static MapOptions setMapOtpions(String projection)
     {
         MapOptions mapOptions = new MapOptions();

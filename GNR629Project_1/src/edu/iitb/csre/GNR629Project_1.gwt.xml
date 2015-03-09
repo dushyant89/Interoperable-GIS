@@ -18,10 +18,10 @@
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
-  <!-- Other module inherits                                      -->
+  <!-- Other module inherits i.e. the external modules -->
  <inherits name='org.gwtopenmaps.openlayers.OpenLayers'/>
  
-  <!-- Specify the app entry point class.                         -->
+  <!-- Specify the app entry point class which is called when the request comes from the client-->
   <entry-point class='edu.iitb.csre.client.GNR629Project_1'/>
   
   <!-- Specify the paths for translatable code                    -->
