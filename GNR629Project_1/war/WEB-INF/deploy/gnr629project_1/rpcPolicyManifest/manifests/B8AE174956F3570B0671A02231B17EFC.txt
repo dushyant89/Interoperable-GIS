@@ -1,0 +1,2 @@
+serviceClass: edu.iitb.csre.client.GreetingService
+path: C8478E9B12E5AAA6784DFE18DE4E6C4F.gwt.rpc

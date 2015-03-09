@@ -1,0 +1,2 @@
+serviceClass: com.csre.gnr.client.GreetingService
+path: 40D9FC28291BBF0B151DB76815D1AFA9.gwt.rpc

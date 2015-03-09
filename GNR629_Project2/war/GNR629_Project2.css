@@ -1,0 +1,95 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+
+
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+/*.gwt-DialogBox {
+ / width: 400px;
+}*/
+.gwt-TabPanel {
+	background-color: rgba(255,255,255,1);
+}
+.gwt-TabBar {
+	background: #7DB5E4 !important;
+}
+.gwt-TabBarItem {
+	background: #E2E2E2 !important;
+}
+.gwt-TabBarItem .gwt-TabBarItem-selected{
+	background: #E2E2E2 !important;
+}
+.gwt-Label,p{
+	font-family:'Open Sans', sans-serif;
+}
+.gwt-title{
+	font-family:'Open Sans', sans-serif;
+	font-size: larger;
+	font-style: italic;
+}
+.dialogVPanel {
+  margin: 5px;
+}
+.gwt-Button
+{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color:#428bca;
+  border-color:#357ebd;
+}
+
+.gwt-Button-Secondary
+{
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 0.5;
+text-align: center;
+white-space: nowrap;
+vertical-align: top;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+color: #fff;
+background-color: rgba(226, 37, 37, 0.62);
+/* border-color: #357ebd; */
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
