@@ -18,7 +18,7 @@ Apache Tomcat, Geoserver
 * Spatial Database: Postgresql + PostGIS
 
 ### Installation
-* Install Apache Tomcat and Geoserver
+* Install Apache Tomcat
 * Install Eclipse IDE, GWT plugin for Eclipse
 * Download and install GWTOpenlayers
 * Make sure to run the Google Chrome in unsecure mode for sending requests to external OGC web services compliant servers
