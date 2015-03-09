@@ -22,8 +22,7 @@ Apache Tomcat, Geoserver
 * Coding: Eclipse IDE, Java, Google Web Tool Kit (GWT), GWTOpenlayers API.
 * Spatial Database: Postgresql + PostGIS
 
-### Outline
-Installation
+### Installation
 * Install Apache Tomcat and Geoserver
 * Install Eclipse IDE, GWT plugin for Eclipse
 * Download and install GWTOpenlayers
