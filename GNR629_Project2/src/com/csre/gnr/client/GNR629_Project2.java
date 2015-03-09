@@ -179,6 +179,9 @@ public class GNR629_Project2 implements EntryPoint {
 
     }
 
+    /**
+     * @return the changed vertical panel with the values for newly selected server
+     */
     private static VerticalPanel changeConfigurationPanel() {
 
         final VerticalPanel configPanel=new VerticalPanel();
@@ -405,6 +408,7 @@ public class GNR629_Project2 implements EntryPoint {
 
                 form.add(panel);
 
+                // a php script for displaying the visualization of the data
                 form.setAction("http://192.168.1.110/gnr629/");
                 RootPanel.get().add(form);
                 form.submit();
@@ -541,9 +545,7 @@ public class GNR629_Project2 implements EntryPoint {
                                   
                                     url+="&offering="+children.item(0).getFirstChild().getNodeValue();
                                     url+="&responseFormat=text%2Fcsv";
-                                    
-                                    System.out.println(url);
-                                    
+                                  
                                     gb.getObservations(url);
                                 }
                             });

@@ -18,6 +18,11 @@ import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 
+/**
+ * This file is for displaying the sensor observations in a table
+ * @author Bhaskar Bandyopadhyay
+ *
+ */
 public class GetObservation {
     private List<Obs> obsList = new ArrayList<Obs>();
     Obs oFirst;
